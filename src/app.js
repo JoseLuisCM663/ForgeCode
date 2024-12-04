@@ -4,6 +4,7 @@ import router from './routes/home.routes.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import usersrouter from './routes/users.routes.js';
+import db from './conecction.js';
 
 dotenv.config();
 
@@ -23,6 +24,15 @@ app.use(express.static(path.join(__dirname, "public")));
 app.listen(process.env.PORT, () => {
     console.log(`Server is running on port ${process.env.PORT}`);   
 });
+
+// conexion a base de datos
+db.authenticate()
+    .then(() => {
+        console.log('Database connected');
+    })
+    .catch((err) => {
+        console.log('Error: ' + err);
+    });
 
 app.use('/', router);
 app.use('/users', usersrouter);

@@ -6,4 +6,11 @@ const register = (req, res) => {
     });
 }
 
-export default register;
+const login = (req, res) => {
+    res.render('login', 
+    {
+        title: 'Login',
+        message: 'Login'
+    });
+}
+export { register, login };
