@@ -5,8 +5,9 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import usersrouter from './routes/users.routes.js';
 import db from './conecction.js';
+import User from './models/users.js';
 
-dotenv.config(); // Inicializar dotenv para usar las variables de entorno
+dotenv.config({path:".env"}); // Inicializar dotenv para usar las variables de entorno
 
 // Obtener __dirname en ES6
 const __filename = fileURLToPath(import.meta.url);
@@ -22,12 +23,20 @@ app.set("views", "src/views");
 app.use(express.static(path.join(__dirname, "public")));
 
 // Conexión a la base de datos
+// Conexión a la base de datos
 try {
     await db.authenticate();
-    console.log("Conexion exitosa.");
+    console.log("Conexión exitosa.");
+
+    // Sincronizar la base de datos con los modelos
+    await db.sync({ alter: true }); // Crea o actualiza tablas según los modelos
+    console.log("Base de datos sincronizada.");
 } catch (error) {
-    console.error("Error en la conexion :", error);
+    console.error("Error en la conexión:", error);
 }
+
+
+
 // Configuración de rutas
 app.use('/', router); // Ruta principal
 app.use('/users', usersrouter); // Ruta para usuarios

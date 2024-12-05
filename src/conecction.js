@@ -12,7 +12,7 @@ const db = new Sequelize(
         host: process.env.DB_HOST, // Host
         port: process.env.DB_PORT, // Puerto
         dialect: "mysql",          // Dialecto
-        logging: false,            // Opcional: desactiva el logging de Sequelize
+        logging: console.log,            // Opcional: desactiva el logging de Sequelize
     }
 );
 
