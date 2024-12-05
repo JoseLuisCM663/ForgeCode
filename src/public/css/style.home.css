@@ -60,3 +60,49 @@ body {
   .promo button:hover {
     background-color: #e68900;
   }
+  .hexagon {
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, background-color 0.3s;
+    margin: auto;
+  }
+
+  .hexagon:hover {
+    transform: scale(1.2);
+  }
+
+  .hexagon i {
+    font-size: 2rem;
+    color: #5bc0de;
+  }
+
+  .btn-service {
+    margin-top: 10px;
+    background-color: #45a5c500;
+    color: rgb(0, 0, 0);
+  border: 2px solid #ff9800;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+
+  .btn-service:hover {
+    background-color: #ff9800;
+  }
+
+  .container {
+    text-align: center;
+    margin-top: 20px;
+    background-color: #e7f4f9;
+    padding: 20px;
+    border-radius: 10px;
+  }

@@ -5,7 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Forge Code Studio</title>
   <link rel="stylesheet" href="/css/style.home.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
+   
+    .btn-service {
+      margin-top: 10px;
+      background-color: #45a5c500;
+      color: rgb(0, 0, 0);
+    border: 2px solid #ff9800;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .btn-service:hover {
+      background-color: #ff9800;
+    }
 
   </style>
 </head>
@@ -43,5 +60,35 @@
     <p>Con nuestros paquetes el incremento de tus clientes está asegurado</p>
     <button>¡Saber más!</button>
   </section>
+
+    <div class="container">
+      <h1>Desarrollo de software del concepto hasta el codigo</h1>
+      <div class="row text-center justify-content-center">
+        <% const services = [
+          { icon: "fas fa-laptop-code", text: "DESARROLLO DE APLICACIONES EMPRESARIALES" },
+          { icon: "fas fa-tools", text: "SOPORTE TÉCNICO Y MANTENIMIENTO" },
+          { icon: "fas fa-chart-line", text: "BUSINESS INTELLIGENCE (BI), ETL Y REPORTES" },
+          { icon: "fas fa-brain", text: "INTELIGENCIA ARTIFICIAL (IA) Y MACHINE LEARNING" },
+          { icon: "fas fa-headset", text: "BPO Y PROCESOS NO TÉCNICOS" },
+          { icon: "fas fa-cloud", text: "ALMACENAMIENTO EN LA NUBE Y CIBERSEGURIDAD" },
+          { icon: "fas fa-clipboard-check", text: "CONTROL DE CALIDAD (QA) Y PRUEBAS DE SOFTWARE" },
+          { icon: "fas fa-cogs", text: "SOPORTE DE PRODUCTOS DE SOCIOS" },
+        ]; %>
+  
+        <% services.forEach(service => { %>
+          <div class="col-md-4 col-lg-3 mb-4">
+            <div class="d-flex flex-column align-items-center">
+              <div class="hexagon">
+                <i class="<%= service.icon %>"></i>
+              </div>
+              <button class="btn btn-service mt-3"><%= service.text %></button>
+            </div>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+
+
 </body>
 </html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
