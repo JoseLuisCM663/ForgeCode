@@ -3,10 +3,14 @@ import db from "../conecction.js";
 import bcrypt from "bcryptjs";
 
 const User = db.define("User", {
+    id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true,
+    },
     Usuario: {
         type: DataTypes.STRING,
         allowNull: false,
-        unique: true,
     },
     email: {
         type: DataTypes.STRING,

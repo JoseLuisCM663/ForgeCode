@@ -5,7 +5,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import usersrouter from './routes/users.routes.js';
 import db from './conecction.js';
-import User from './models/users.js';
+import buzonrouter from './routes/buzon.routes.js';
 
 dotenv.config({path:".env"}); // Inicializar dotenv para usar las variables de entorno
 
@@ -35,11 +35,16 @@ try {
     console.error("Error en la conexión:", error);
 }
 
+// Middleware para procesar datos de formularios (application/x-www-form-urlencoded)
+app.use(express.urlencoded({ extended: true }));
 
+// Middleware para procesar datos JSON (application/json)
+app.use(express.json());
 
 // Configuración de rutas
 app.use('/', router); // Ruta principal
 app.use('/users', usersrouter); // Ruta para usuarios
+app.use('/buzon', buzonrouter); // Ruta para el formulario de contacto
 
 // Iniciar servidor
 const PORT = process.env.PORT || 3000;
