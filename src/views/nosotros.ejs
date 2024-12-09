@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros | ForgeCode Studio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <%- include('layouts/header', {ID, mail}); %>
+
+    <!-- Sección Principal -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1>Sobre ForgeCode Studio</h1>
+                <p class="lead">
+                    En <strong>ForgeCode Studio</strong>, nos especializamos en la creación de soluciones personalizadas para pequeñas y medianas empresas (PyMEs), ayudándolas a destacar en el mundo digital.
+                </p>
+                <p>
+                    Nuestro objetivo es brindar herramientas accesibles y efectivas que impulsen la visibilidad, competitividad y crecimiento de las PyMEs en Xicotepec de Juárez. Creemos en el poder de la tecnología para transformar negocios y construir un futuro más conectado y próspero.
+                </p>
+                <p>
+                    A través de soluciones innovadoras, ayudamos a las PyMEs a expandir su alcance, mejorar sus procesos internos y crear una presencia digital impactante que atraiga a nuevos clientes y fidelice a los existentes.
+                </p>
+                <p>
+                    En ForgeCode Studio, estamos comprometidos con el éxito de cada cliente y trabajamos estrechamente con ellos para ofrecer soluciones tecnológicas que se adapten a sus necesidades específicas.
+                </p>
+                <button class="btn btn-primary mt-3">¡Contáctanos y transforma tu negocio!</button>
+            </div>
+            <div>
+                <img class="imgH" src="/img/logoxd.png" alt="Personas trabajando">
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de Misión -->
+    <div class="container mt-5">
+        <h2 class="text-center">Nuestra Misión</h2>
+        <p class="lead text-center">
+            Ofrecer soluciones tecnológicas accesibles y eficaces que impulsen el crecimiento y la competitividad de las PyMEs de Xicotepec de Juárez, a través de herramientas digitales personalizadas y servicios adaptados a sus necesidades.
+        </p>
+    </div>
+
+    <!-- Sección de Visión -->
+    <div class="container mt-5">
+        <h2 class="text-center">Nuestra Visión</h2>
+        <p class="lead text-center">
+            Ser la empresa líder en el desarrollo de soluciones digitales para PyMEs en Xicotepec de Juárez, creando un futuro más conectado, competitivo y próspero para los negocios locales.
+        </p>
+    </div>
+
+    <%- include('layouts/footer'); %>
+</body>
+</html>

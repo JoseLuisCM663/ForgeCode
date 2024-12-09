@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrolladores</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <%- include('layouts/header', {ID, mail}); %>
+    <div class="container">
+        <h1>Escoja al mejor</h1>
+        <button class="btn-service mt-3">Contrate a nuestros desarrolladores</button>
+    </div>
+
+    <div class="container2">
+        <div class="row1">
+            <div class="card1">
+                <i class="bi bi-apple"></i> <!-- Icono de Apple para Objective-C -->
+                <h3>Desarrolladores de Objective-C</h3>
+                <p>Objective-C es un lenguaje de programación orientado a objetos, usado principalmente para desarrollar aplicaciones para los sistemas operativos iOS y macOS. Con la integración de Swift, permite crear aplicaciones más rápidas y eficientes para las plataformas de Apple.</p>
+            </div>
+
+            <div class="card1">
+                <i class="bi bi-file-earmark-code"></i> <!-- Icono de archivo de código para C++ -->
+                <h3>Desarrolladores de C++</h3>
+                <p>C++ es un lenguaje de programación de alto rendimiento, utilizado en el desarrollo de software que requiere eficiencia y control sobre los recursos del sistema. Se usa comúnmente en aplicaciones de sistemas operativos, videojuegos y software de alto rendimiento.</p>
+            </div>
+
+            <div class="card1">
+                <i class="bi bi-code-slash"></i> <!-- Icono de código para JavaScript -->
+                <h3>Desarrolladores de JavaScript</h3>
+                <p>JavaScript es el lenguaje de programación esencial para el desarrollo web interactivo. Usado tanto en el front-end como en el back-end (con Node.js), permite crear aplicaciones dinámicas y altamente interactivas para la web.</p>
+            </div>
+
+            <div class="card1">
+                <i class="bi bi-code-slash"></i> <!-- Icono de código para HTML5 -->
+                <h3>Desarrolladores de HTML5</h3>
+                <p>HTML5 es la última versión del lenguaje de marcado utilizado para estructurar contenido en la web. Junto con CSS y JavaScript, forma la base del desarrollo de sitios web modernos, permitiendo multimedia, interactividad y mayor accesibilidad.</p>
+            </div>
+
+            <div class="card1">
+                <i class="bi bi-filetype-java"></i> <!-- Icono de Java para Java -->
+                <h3>Desarrolladores de Java</h3>
+                <p>Java es un lenguaje de programación de propósito general que sigue el paradigma de programación orientada a objetos. Es conocido por su portabilidad y se usa ampliamente en aplicaciones empresariales, móviles (Android) y sistemas de backend.</p>
+            </div>
+
+            <div class="card1">
+                <i class="bi bi-puzzle"></i> <!-- Icono de rompecabezas para Python -->
+                <h3>Desarrolladores de Python</h3>
+                <p>Python es un lenguaje de programación de alto nivel, interpretado y muy popular por su sintaxis sencilla. Se usa en una variedad de campos, como desarrollo web, inteligencia artificial, ciencia de datos y automatización.</p>
+            </div>
+
+            <div class="card1">
+                <i class="bi bi-c-circle"></i> <!-- Icono de C# para C# -->
+                <h3>Desarrolladores de C#</h3>
+                <p>C# es un lenguaje de programación moderno y orientado a objetos desarrollado por Microsoft. Se utiliza principalmente para desarrollar aplicaciones en el ecosistema de Microsoft, incluyendo aplicaciones de escritorio, web y videojuegos (con Unity).</p>
+            </div>
+
+            <div class="card1">
+                <i class="bi bi-terminal"></i> <!-- Icono de terminal para PHP -->
+                <h3>Desarrolladores de PHP</h3>
+                <p>PHP es un lenguaje de programación del lado del servidor utilizado principalmente para desarrollar sitios web dinámicos. Es uno de los lenguajes más populares para crear aplicaciones web, con soporte para bases de datos como MySQL.</p>
+            </div>
+
+            <div class="card1">
+                <i class="bi bi-database"></i> <!-- Icono de base de datos para SQL -->
+                <h3>Desarrolladores de SQL</h3>
+                <p>SQL (Structured Query Language) es el lenguaje utilizado para gestionar bases de datos relacionales. Es esencial para la manipulación y consulta de datos en sistemas de bases de datos, como MySQL, PostgreSQL y Microsoft SQL Server.</p>
+            </div>
+        </div>
+    </div>
+
+    <%- include('layouts/footer'); %>
+</body>
+</html>

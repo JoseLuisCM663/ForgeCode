@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - ForgeCode Studios</title>
-    <link rel="stylesheet" href="/css/style.users.css">
     <style>
         /* Agrega estilos aquí o usa un archivo CSS externo */
         body {
@@ -12,93 +11,17 @@
             margin: 0;
             padding: 0;
         }
-
-
-        .contact-container {
-            display: flex;
-            justify-content: space-between;
-            padding: 40px;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        .contact-info, .contact-form {
-            width: 48%;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-            background-color: #fff;
-        }
-
-        .contact-info h2 {
-            margin-bottom: 20px;
-        }
-
-        .contact-info p {
-            margin: 10px 0;
-            line-height: 1.6;
-        }
-
-        .contact-info i {
-            margin-right: 10px;
-        }
-
-        .contact-form h2 {
-            margin-bottom: 20px;
-        }
-
-        .contact-form form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .contact-form label {
-            margin-top: 10px;
-        }
-
-        .contact-form input, 
-        .contact-form textarea, 
-        .contact-form button {
-            margin-top: 5px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .contact-form button {
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-
-        .contact-form button:hover {
-            background-color: #0056b3;
-        }
-
-        .footer-logo {
-            text-align: center;
-            margin-top: 20px;
-        }
     </style>
 </head>
 <body>
     <!-- Sección de encabezado -->
-    <header>
-        <nav>
-          <span>Forge Code Studio</span>
-          <div>
-            <a href="/services">Servicios</a>
-            <a href="/support">Soporte</a>
-            <a href="/buzon/contacto">Contactanos</a>
-            <a href="/users/login">Iniciar sesión</a>
-            <a href="/users/register">Registrarse</a>
-          </div>
-        </nav>
-      </header>
+    <%- include('layouts/header',{ID,mail}); %>
+
 
     <!-- Sección principal -->
+    <div class="titulo">
+        <img src="/img/contactanos.png" alt="">
+    </div>
     <div class="contact-container">
         <!-- Información de contacto -->
         <div class="contact-info">
@@ -106,12 +29,14 @@
             <p>¿Preguntas, comentarios o sugerencias? Simplemente complete el formulario y nos comunicaremos en breve.</p>
             <p><i class="fas fa-map-marker-alt"></i> Col. Tierra Negra, Av. Universidad 1123</p>
             <p><i class="fas fa-phone-alt"></i> +52 764 122 34 56</p>
-            <p><i class="fas fa-envelope"></i> forgeCode516@gmail.com</p>
+            <p><i class="fas fa-envelope"></i> ForgeCodeStudio@gmail.com</p>
+        </div>
+        <div class="logo">
+            <img src="/img/logoEspejo.png" alt="ForgeCode Studios" width="150">
         </div>
 
         <!-- Formulario de contacto -->
         <div class="contact-form">
-            <h2>Formulario de Contacto</h2>
             <form action="/send-message" method="POST">
                 <label for="name">Nombre *</label>
                 <input type="text" id="name" name="name" placeholder="Tu nombre" required>
@@ -133,9 +58,6 @@
         </div>
     </div>
 
-    <!-- Sección del logo -->
-    <div class="footer-logo">
-        <img src="/img/logoxd.png" alt="ForgeCode Studios" width="150">
-    </div>
+    <%- include('layouts/footer'); %>
 </body>
 </html>
