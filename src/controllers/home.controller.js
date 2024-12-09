@@ -34,4 +34,17 @@ const nosotros = (req, res) => {
         message: 'Nosotros'
     });
 }
-export {home, desarrolladores, nosotros};
+
+const industrias = (req, res) => {
+    const user = req.session?.user || {}; // Si no hay sesión, usa un objeto vacío
+
+    res.render('industrias', 
+    {
+        ID: user.id || 'Invitado', // Si no hay ID, muestra 'Invitado'
+        mail: user.email || 'Invitado', // Si no hay nombre, muestra 'Invitado'
+        title: 'Industrias',
+        message: 'Industrias'
+    });
+}
+
+export {home, desarrolladores, nosotros , industrias};
