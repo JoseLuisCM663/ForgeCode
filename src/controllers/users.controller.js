@@ -52,7 +52,6 @@ const registerUser = async (req, res) => {
         res.status(500).json({ message: "Error al registrar el usuario." });
     }
 };
-
 const loginUser = async (req, res) => {
     try {
         const { email, password } = req.body;
@@ -69,13 +68,31 @@ const loginUser = async (req, res) => {
             return res.status(400).send('<script>alert("Contraseña incorrecta."); window.location.href="/users/login";</script>');
         }
 
-        // Respuesta exitosa y redirección al inicio 
+        // Guardar información del usuario en la sesión
+        req.session.user = {
+            id: user.id,
+            email: user.email,
+            name: user.name // Ajusta según los campos en tu modelo de usuario
+        };
+
+        // Redirigir al inicio
         res.status(200).send('<script>window.location.href="/";</script>');
 
     } catch (error) {
         console.error(error);
         res.status(500).json({ message: "Error al iniciar sesión." });
     }
-}
+};
 
-export { register, login, registerUser, loginUser };
+const logout = (req, res) => {
+    req.session.destroy(err => {
+        if (err) {
+            console.error(err);
+            res.status(500).send('Error al cerrar sesión');
+        } else {
+            res.redirect('/login');
+        }
+    });
+};
+
+export { register, login, registerUser, loginUser, logout };
