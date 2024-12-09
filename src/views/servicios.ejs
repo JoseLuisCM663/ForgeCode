@@ -1,11 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>servicios</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
 </head>
+<style>
+    /* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 30px;
+}
+.servicio {
+    border: 2px dashed #308AD9;
+    margin: 30px;
+}
+
+</style>
 <body>
-    <h1>hola</h1>
+    <%- include('layouts/header', {ID, mail}); %>
+    <!-- Sección Principal -->
+        
+     <!-- Nuevos Servicios -->
+     <div class="servicio">
+        <div class="container">
+            <h1>Desarrollo de Aplicaciones Empresariales</h1>
+            <p>Diseñamos aplicaciones empresariales personalizadas para optimizar procesos internos, mejorar la colaboración y fomentar el crecimiento.</p>
+        </div>
+        <div class="feature">
+
+            <div class="feature-text">
+                <h3>Desarrollo de Aplicaciones Multiplataforma
+                </h3>
+                <p>Desarrollamos aplicaciones multiplataforma e híbridas y esto permite que las empresas utilicen la misma base de código para iOS, Android y Windows. Entregamos aplicaciones móviles multiplataforma y multipropósito utilizando varios marcos.</p>
+                <h3>Soluciones de Desarrollo de Aplicaciones Personalizadas
+                </h3>
+                <p>Desarrollamos, integramos y diseñamos aplicaciones personalizadas para entornos corporativos y de cara al consumidor distribuidas en dispositivos móviles y web, escritas en Java, JavaScript, Python, C #, C ++ y otros lenguajes de programación.</p>
+            </div>
+            <div class="feature-image">
+                <img src="/img/multi.png" alt="Aplicación de Banca Móvil">
+            </div>
+        </div>
+    </div>
+
+    <div class="servicio">
+        <div class="container">
+            <h1>Business Intelligence (BI), ETL y Reportes</h1>
+            <p>Implementamos soluciones BI que ayudan a las empresas a tomar decisiones basadas en datos, con procesos ETL eficientes y reportes personalizados.</p>
+        </div>
+        <div class="feature">
+
+            <div class="feature-text">
+                <h3>Soluciones de Almacenamiento de Datos BI</h3>
+                <p>
+                    Proporcionamos soluciones de almacenamiento de datos BI (Business Intelligence) que facilitan la ingeniería de sistemas de depósito de datos de repositorios centrales para Extraer, Transformar y Cargar (ETL) la información diversa de fuentes dispares, que incluyen aplicaciones, sistemas, plataformas, canales y departamentos. Configuramos varios nodos para la agregación de datos y aseguramos el clúster de datos de forma segura en la nube o base de datos para su programa de análisis para extraer datos..</p>
+            </div>
+            <div class="imgdos">
+                <img src="/img/bd.png" alt="Aplicación de Banca Móvil">
+            </div>
+        </div>
+    </div>
+
+    <div class="servicio">
+        <div class="container">
+            <h1>Ciberseguridad</h1>
+            <p>Ofrecemos servicios de ciberseguridad para proteger los sistemas y datos de las empresas contra posibles amenazas digitales.</p>
+        </div>
+        <div class="feature">
+            <div class="feature-text">
+                <h3>Protección de Infraestructura</h3>
+                <p>Implementamos soluciones avanzadas para proteger redes, servidores y dispositivos contra ataques cibernéticos y accesos no autorizados.</p>
+            </div>
+            <div class="imgdos">
+                <img src="/img/ciber.png" alt="Protección de Infraestructura">
+            </div>
+            <div class="feature-text">
+                <h3>Monitoreo y Respuesta a Incidentes</h3>
+                <p>Utilizamos herramientas de monitoreo 24/7 para detectar y mitigar amenazas en tiempo real, asegurando la continuidad operativa de tu negocio.</p>
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="promo">
+        <h2>CONTÁCTENOS</h2>
+        <p>Envíenos un mensaje o llámenos. Nos encanta saber de usted y estaremos encantados de responder cualquier pregunta.
+
+        </p>
+        <button class="btn-service mt-3">¡Contáctanos y transforma tu negocio!</button>
+
+    </div>
+
+    <%- include('layouts/footer'); %>
 </body>
 </html>

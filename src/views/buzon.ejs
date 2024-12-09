@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos los Mensajes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <%- include('layouts/header', {ID, mail}); %>
+    <div class="container mt-5">
+        <h1 class="mb-4">Todos los Mensajes</h1>
+        <table class="table table-bordered table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Teléfono</th>
+                    <th>Mensaje</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if (mensajes && mensajes.length > 0) { %>
+                    <% mensajes.forEach((mensaje, index) => { %>
+                        <tr>
+                            <td><%= index + 1 %></td>
+                            <td><%= mensaje.nombre %></td>
+                            <td><%= mensaje.apellidos %></td>
+                            <td><%= mensaje.telefono %></td>
+                            <td><%= mensaje.mensaje %></td>
+                        </tr>
+                    <% }); %>
+                <% } else { %>
+                    <tr>
+                        <td colspan="5" class="text-center">No hay mensajes disponibles.</td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+    <%- include('layouts/footer'); %>
+</body>
+</html>

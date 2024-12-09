@@ -47,4 +47,15 @@ const industrias = (req, res) => {
     });
 }
 
-export {home, desarrolladores, nosotros , industrias};
+const servicios = (req, res) => {
+    const user = req.session?.user || {}; // Si no hay sesión, usa un objeto vacío
+
+    res.render('servicios', 
+    {
+        ID: user.id || 'Invitado', // Si no hay ID, muestra 'Invitado'
+        mail: user.email || 'Invitado', // Si no hay nombre, muestra 'Invitado'
+        title: 'Servicios',
+        message: 'Servicios'
+    });
+}
+export {home, desarrolladores, nosotros , industrias, servicios};
